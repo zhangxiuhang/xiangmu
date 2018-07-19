@@ -1,0 +1,60 @@
+/* pages/mycenter/goodscollect.axss */
+.container{
+    width: 100%;
+}
+.item{
+    width: 100%;
+}
+.fav_div{
+    width: 94%;
+    height: auto;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #fff;
+    margin: 0px auto 10px;
+    border-radius: 4px;
+}
+.shopCarProductDivbtnClick{
+    flex: 1;
+}
+.shopCarProductDivbtnClick navigator{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+}
+.fav_img image{
+    width: 80px;
+    height: 80px;
+    display: block;
+}
+.fav_info{
+    font-size: 14px;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+}
+.order-infosucc{
+    width: 100%;
+    /*height: 30px;
+    line-height: 30px;*/
+    background: #fff;
+    padding: 100px 0px;
+}
+.space-coll{
+    height: 10px;
+    width: 100%;
+}
+
+.prices {
+    color: #f60;
+}
+
+.order-infosucc {
+    text-align: center;
+}

@@ -1,0 +1,14 @@
+/* pages/mycenter/readme.wxss */
+page {
+    background-color: #f5f5f5;
+    font-size: 13px;
+}
+view {
+    background-color: #f5f5f5;
+    margin: 0px auto;
+    text-align: center;
+}
+image.bgimage {
+    width:100%;
+    height: 2160rpx;
+}

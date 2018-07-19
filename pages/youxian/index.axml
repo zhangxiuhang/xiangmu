@@ -1,0 +1,70 @@
+<!--home.wxml-->
+<view class="container">
+  <view class="products">
+  <image class="dialogIco_arrow" width="50" height="50" src="../images/icon_position.png" alt=""></image>
+  <view class="tation-up">
+    <view class="tation-dir" onTap="powerShow" data-statu="open">
+      <view class="pos_item">当前位置：{{selectUserAddr}}</view>
+      <view class="icon-bottom">
+        <!-- <image mode="aspectFit" class="arrow_d" src="../../images/arrow.png"></image> -->
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- <view onTap="testtype">测试分类</view>
+<view onTap="goodslistcs">测试商品列表</view>
+<view onTap="getshebei">获取设备列表</view>
+<view onTap="get_EquiLocation">获取设备位置</view> -->
+
+  <image style="width:75%;height: 850rpx;" class="bgimage" src="../images/17-bg.png"></image>
+  <view class="btnview" onTap="{{bindevent}}">
+    <image class="btnimage" src="http://romens-10034140.image.myqcloud.com/scan-btn.png?imageView2/100/w/640/h/0/format/png/q/85"></image>
+  </view>
+</view>
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="a" a:if="{{showModalStatus}}">
+  <view id="dialogBg"></view>
+  <view class="drawer_box">
+    <!--drawer content-->
+    <image class="dialogIco" width="50" height="50" src="../images/icon_position.png" alt=""></image>
+    <view class="drawer_title">附近设备</view>
+    <view class="drawer_content">
+      <navigator url="/pages/index/posAddress?from=index" hover-class="navigator-hover">
+        <!-- <view class="top grid">
+          <label class="title col-0">
+            <image mode="aspectFit" class="location-icon" src="../images/address.png"></image>
+          </label>
+          <label class="pos_select">
+            <text class="tck_sz">送货至：</text>{{selectUserAddr}}
+          
+          </label>
+          <label style="display:flex;flex-direction:row;justify-content:space-between;align-items:center;">
+            <image class="location-icon1" src="../images/enter.png"></image>
+          </label>
+        </view> -->
+      </navigator>
+      <!-- <view a:if="{{is_virtual_branch == 0}}" class="service_store">附近服务门店</view>
+      <view a:else class="service_store" style="font-size:13px;">哎呀，附近没有门店，去中心店逛逛吧（下单后2-5天送达）</view> -->
+      <block a:if="{{EquipmentList.length == 0}}">
+        <view style='text-align:center;'>抱歉，暂无匹配设备~~</view>
+      </block>
+      <block a:else>
+        <!-- <radio-group class="radio-group" onChange="radioChange">
+          <label class="top_b line-style item_fix" a:for="{{EquipmentList}}" a:for-index="idx" a:for-item="item">
+            <radio class="item-radio" value="{{idx}}|{{item.GUID}}|{{item.CODE}}|{{item.NAME}}|{{item.branch_address}}|{{item.ISVIRTUALBRANCH}}" checked="{{item.checked}}" />
+              {{item.deviceName}}
+          </label>
+        </radio-group> -->
+        <view  a:for="{{EquipmentList}}" a:for-index="idx" a:for-item="item">
+          <view onTap="GetshebeiLocation" data-deviceName="{{item.deviceName}}" data-deviceProperty="{{item.deviceProperty}}" data-lat="{{item.lat}}" data-lng="{{item.lng}}">
+          {{item.deviceName}}
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="btn_ok" onTap="powerClose" data-statu="close">
+      <button class="submitBtn">确定</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/youxian/index",
+    "pages/youxian/goodsdetails",
+    "pages/youxian/coupon",
+    "pages/youxian/goodssort",
+    "pages/mycenter/mycenter",
+    "pages/mycenter/goodscollect",
+    "pages/mycenter/mycoupon",
+    "pages/mycenter/readme",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "defaultTitle": "天任售货机平台",
+    "titleBarColor": "#0289d1",
+    "backgroundColor":"#ffffff"
+  },
+  "tabBar": {
+    "textColor": "#646464",
+    "selectedColor": "#ef4746",
+    "backgroundColor": "#ffffff",
+    "items": [
+      {
+        "pagePath": "pages/youxian/index",
+        "name": "首页",
+        "icon":"pages/images/scancode.png",
+        "activeIcon":"pages/images/scancode-avtive.png"
+      },
+      {
+        "pagePath": "pages/youxian/goodssort",
+        "name": "商品分类",
+        "icon": "pages/images/sort.png",
+        "activeIcon":"pages/images/sort-active.png"
+      },
+      {
+        "pagePath": "pages/youxian/coupon",
+        "name": "优惠券",
+        "icon":"pages/images/cou.png",
+        "activeIcon":"pages/images/cou-active.png"
+      },
+      {
+        "pagePath": "pages/mycenter/mycenter",
+        "name": "个人中心",
+        "icon":"pages/images/personal.png",
+        "activeIcon":"pages/images/personal_active.png"
+      }
+    ]
+  }
+}

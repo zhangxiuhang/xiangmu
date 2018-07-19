@@ -1,0 +1,28 @@
+<view class="container">
+    <view class="space-coll"></view>
+    <view class="item" a:for="{{goodslist}}" a:for-index="idx" a:for-item="itemName">
+        <view class="fav_div">
+            <view class="shopCarProductDivbtnClick">
+                <navigator url="../goods/goodsdetails?id={{itemName.GOODSGUID}}&buymyself=1">
+                    <view class="fav_img">
+                        <image src="{{itemName.GOODSICON}}" class="productImag"></image>
+                    </view>
+                    <view>
+                        <view class="fav_info">{{itemName.GOODSNAME}}</view>
+                        <view class="fav_info prices">收藏价：￥{{itemName.GOODSPRICE}}</view>
+                    </view>
+                </navigator>
+            </view>
+            <view class="fav_del0">
+                <!--<image src="http://wxc6283d4008bb8ea0.shop.yiyao365.cn/theme/default/images/wap/delete.png" style="height: 20px;width: 20px;"></image>      -->
+            </view>
+        </view>
+    </view>
+    <view a:if="{{!goodslist.length}}" class="order-infosucc">
+        <image mode="widthFix" src="http://shop.yiyao365.cn/theme/default/images/wap/search-none.png" style="height:165px;width:40%"></image>
+        <view>
+            {{nodatainfo}}
+        </view>
+    </view>
+    <!--<view class="order-infosucc">{{nodatainfo}}</view>-->
+</view>

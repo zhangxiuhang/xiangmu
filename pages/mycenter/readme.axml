@@ -1,0 +1,4 @@
+<!--pages/mycenter/readme.wxml-->
+<view>
+    <image class="bgimage" src="{{shopping_imgurl}}" mode="widthFix"></image>
+</view>

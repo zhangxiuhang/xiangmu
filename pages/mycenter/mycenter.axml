@@ -1,0 +1,163 @@
+<!--index.wxml-->
+<view class="container container1">
+  <view class="pagetop">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatar}}"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <view a:if="{{isshowlogin==1}}">
+        <navigator class="logininfo" url='{{loginurl}}'>{{showtext}}</navigator>
+      </view>
+      <view a:else>
+        <text class="color">{{showtext}}</text>
+        <text class="exit" a:if="{{showtext}}" onTap='userexit'>{{logouttxt}}</text>
+      </view>
+    </view>
+  </view>
+  <!--<view class="pagenav">
+    <div>签到积分：{{signinpoint}}</div><div>消费积分：{{consumptionpoint}}</div>
+  </view>-->
+
+  <view class="orderinfo">
+    <!--修改后的我的订单 start -->
+    <view class="order-list-all">
+      <view class="myorder">
+        <view class="myordertext">
+          <image class="iconfirst" src="../images/order-icon.png"></image>
+          <view>我的订单</view>
+        </view>
+        <navigator class="myordertext" url="../order/orderlist">
+          <text>全部订单</text>
+          <image class="iconsecond" src="http://mshop.yiyao365.cn/theme/default/images/wap/icon-05.png"></image>
+        </navigator>
+      </view>
+      <!-- <view class="listclass">
+        <navigator url="../order/orderlist?type=2" open-type="navigate">
+          <image class="iconfirst" src="../images/waitpay.png"></image>
+          <view>待付款</view>
+          <view a:if="{{dfk =='0'}}" class="ordernum_icon1">{{dfk}}</view>
+          <view a:elif="{{dfk !='0'}}" class="ordernum_icon1 ordernum_view">{{dfk}}</view>
+        </navigator>
+        <navigator url="../order/orderlist?type=4" open-type="navigate">
+          <image class="iconfirst" src="../images/waitsend.png"></image>
+          <view>待发货</view>
+          <view a:if="{{dfh =='0'}}" class="ordernum_icon1">{{dfh}}</view>
+          <view a:elif="{{dfh !='0'}}" class="ordernum_icon1 ordernum_view">{{dfh}}</view>
+        </navigator>
+        <navigator url="../order/orderlist?type=5" open-type="navigate">
+          <image class="iconfirst" src="../images/waitget.png"></image>
+          <view>待收货</view>
+          <view a:if="{{dsh =='0'}}" class="ordernum_icon1">{{dsh}}</view>
+          <view a:elif="{{dsh !='0'}}" class="ordernum_icon1 ordernum_view">{{dsh}}</view>
+        </navigator>
+        <navigator url="../order/orderlist?type=11" open-type="navigate">
+          <image class="iconfirst" src="../images/done.png"></image>
+          <view>已完成</view>
+          <view a:if="{{ywc =='0'}}" class="ordernum_icon1">{{ywc}}</view>
+          <view a:elif="{{ywc !='0'}}" class="ordernum_icon1 ordernum_view">{{ywc}}</view>
+        </navigator>
+      </view> -->
+    </view>
+    <!--end  -->
+    <view class="order-list-all">
+      <!-- <navigator url="../card/index">
+        <view class="div_div1 orderList">
+          <view class="tab_div">
+            <view class="ico1">
+              <image src="../images/vip-icon.png"></image>
+              <view class="tab_span">我的会员卡</view>
+            </view>
+            <view class="ico2">
+              <image src="http://mshop.yiyao365.cn/theme/default/images/wap/icon-05.png"></image>
+            </view>
+          </view>
+
+          <view class="divclear5"></view>
+        </view>
+      </navigator> -->
+      
+      <navigator url="">
+        <view class="div_div1 orderList">
+          <view class="tab_div">
+            <view class="ico1">
+              <image src="../images/yhq.png"></image>
+              <view class="tab_span">我的优惠券</view>
+            </view>
+            <view class="ico2">
+              <image src="http://mshop.yiyao365.cn/theme/default/images/wap/icon-05.png"></image>
+            </view>
+          </view>
+          <view class="divclear5"></view>
+        </view>
+      </navigator>
+      <!--
+      <web-view src="https://shop.yiyao.cn">
+        <div class="div_div1 orderList">
+          <div class="tab_div">
+            <div class="ico1">
+              <image src="../images/cart-new.png"></image>
+              <span class="tab_span">我的购物车</span>
+            </div>
+            <div class="ico2">
+              <image src="http://mshop.yiyao365.cn/theme/default/images/wap/icon-05.png"></image>
+            </div>
+          </div>
+
+          <div class="divclear5"></div>
+        </div>
+        </web-view>
+        -->
+    </view>
+    <view class="order-list-all">
+      <!-- <navigator url="../order/orderlist" class="">
+            <div class="div_div1 orderList">
+                <div class="tab_div">
+                    <div class="ico1">
+                        <image src="../images/order-icon.png"></image>
+                        <span class="tab_span">我的订单</span>
+                    </div>
+                    <div class="ico2">
+                        <image src="http://mshop.yiyao365.cn/theme/default/images/wap/icon-05.png"></image>
+                    </div>
+                </div>
+                
+                <div class="divclear5"></div>
+            </div>
+        </navigator>  -->
+      <navigator url="">
+        <view class="div_div1 orderList">
+          <view class="tab_div">
+            <view class="ico1">
+              <image src="../images/honst-icon.png"></image>
+              <view class="tab_span">我的收藏</view>
+            </view>
+            <view class="ico2">
+              <image src="http://mshop.yiyao365.cn/theme/default/images/wap/icon-05.png"></image>
+            </view>
+          </view>
+          <view class="divclear5"></view>
+        </view>
+      </navigator>
+      <navigator url="">
+        <view class="div_div1 orderList">
+          <view class="tab_div">
+            <view class="ico1">
+              <image src="../images/xun1-active.png"></image>
+              <view class="tab_span">购物须知</view>
+            </view>
+            <view class="ico2">
+              <image src="http://mshop.yiyao365.cn/theme/default/images/wap/icon-05.png"></image>
+            </view>
+          </view>
+          <view class="divclear5"></view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class="footer">
+    <view>天任提供技术支持</view>
+  </view>
+  <!--
+  <view class="bottom"><div class="weui-tabbar"><navigator url="../index/index" class="weui-tabbar__item weui-bar__item_on"><span style="display: inline-block;position: relative;"><image src="../images/home.png" class="weui-tabbar__icon"></image><span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span></span><p class="weui-tabbar__label">仲景商城</p></navigator><navigator url="../takepicmedicine/index" class="weui-tabbar__item"><image src="../images/yao1.png" class="weui-tabbar__icon"></image><p class="weui-tabbar__label_center">照方煎药</p></navigator><view bindtap="scanCodeTap" class="weui-tabbar__item"><image src="../images/scancode-avtive.png" class="weui-tabbar__icon biggerimg"></image>
+  <!--<p class="weui-tabbar__label_center allcolor">扫码购药</p>-->
+  <!--</view><navigator url="../news/news" class="weui-tabbar__item"><image src="../images/xun1.png" class="weui-tabbar__icon"></image><p class="weui-tabbar__label_center">健康资讯</p></navigator><navigator url="../mycenter/mycenter" class="weui-tabbar__item"><image src="../images/mycenter-active.png" class="weui-tabbar__icon"></image><p class="weui-tabbar__label_center allcolor">个人中心</p></navigator></div></view>-->
+</view>
